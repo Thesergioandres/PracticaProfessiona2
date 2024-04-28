@@ -1,0 +1,71 @@
+<section class="gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <form [formGroup]="formSesion">
+                    <h2 class="fw-bold mb-2 text-uppercase">Create Count</h2>
+                    <p class="text-white-50 mb-5">Por favor ingrese los datos requerido!</p>
+      
+                    <!-- Nombre -->
+                    <div class="form-outline form-white mb-4">
+                      <mat-form-field class="control"appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Ingrese nombre" formControlName="nombre"/>
+                        <mat-error *ngIf="formSesion.controls['nombre'].hasError('required')">
+                            Por favor ingrese un nombre
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+
+                    <!-- Apellido -->
+                    <div class="form-outline form-white mb-4">
+                      <mat-form-field class="control"appearance="fill">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput placeholder="Ingrese apellido" formControlName="apellido"/>
+                        <mat-error *ngIf="formSesion.controls['apellido'].hasError('required')">
+                            Por favor ingrese un apellido
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <mat-form-field class="control"appearance="fill">
+                        <mat-label>Correo</mat-label>
+                        <input matInput placeholder="Ingrese correo" formControlName="email"/>
+                        <mat-error *ngIf="formSesion.controls['email'].hasError('required')">
+                            Por favor ingrese un correo
+                        </mat-error>
+                        <mat-error *ngIf="formSesion.get('email')?.hasError('noEsCorreo')"> Por favor ingrese un correo válido</mat-error>
+                      </mat-form-field>
+                    </div>
+      
+                    <div class="form-outline form-white mb-4">
+                        <mat-form-field class="control"appearance="fill">
+                            <mat-label>Contraseña</mat-label>
+                            <input matInput placeholder="Ingrese contraseña" formControlName="contrasena" type="password" />
+                            <mat-error *ngIf="formSesion.controls['contrasena'].hasError('required')">
+                              El campo es requerido
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </form>
+  
+                <button class="btn btn-outline-light btn-lg px-5" (click)="crearCuenta()">Crear Cuenta</button>
+  
+              </div>
+  
+              <div>
+                <p class="mb-0">Ya tienes cuenta? <a routerLink="../" class="text-white-50 fw-bold">Iniciar sesión</a>
+                </p>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

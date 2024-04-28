@@ -1,0 +1,9 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background-color:#34C2FF ;
+    height: 100%;
+}
+
+    .control{
+        width: 100%;
+    }

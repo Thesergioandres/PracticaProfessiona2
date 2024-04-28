@@ -1,0 +1,19 @@
+<div class="svg-background">
+<br><br><div class="container3">
+    <div>
+   
+    <section class="container-products">   
+    @for(producto of listadoProductos; track $index){
+        <div class="product">
+            <img [src]="producto.imagen" class="product__img">
+            <div><br>
+               <h3>{{producto.nombre}}</h3>
+               <span class="product__precio">{{producto.precio}}</span>
+            </div>
+            <a (click)="agregarAlCarrito(producto, producto.imagen)" style="cursor: pointer;"><i class="product__icon fas fa-cart-plus"></i></a>
+        </div>
+    } 
+    </section>
+    </div>
+</div>     
+</div>       
