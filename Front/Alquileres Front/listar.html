@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Propiedades</title>
+    <link rel="stylesheet" href="listar.css" />
+  </head>
+  <body>
+    <h1>Listado de Propiedades</h1>
+
+    <button onclick="window.location.href='crear.html'">Crear Propiedad</button>
+
+    <table id="property-table">
+      <thead>
+        <tr>
+          <th>Nombre del dueño</th>
+          <th>Ubicación</th>
+          <th>URL de la Imagen</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="property-list">
+        <!-- Aquí se agregarán las filas de propiedades -->
+      </tbody>
+    </table>
+
+    <script src="listar.js"></script>
+  </body>
+</html>

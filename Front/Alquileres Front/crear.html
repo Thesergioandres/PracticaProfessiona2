@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Propiedad</title>
+    <link rel="stylesheet" href="crear.css" />
+  </head>
+  <body>
+    <h1>Crear Nueva Propiedad</h1>
+
+    <form id="property-form">
+      <label for="name">Nombre del dueño:</label>
+      <input type="text" id="name" name="name" required />
+      <div class="error-message" id="name-error"></div>
+
+      <h3 class="Condicion">
+        Solo se pueden crear propiedades que esten en las ciudades, Medellin,
+        Bogota y Cartagena
+      </h3>
+
+      <label for="location">Ubicación:</label>
+      <input type="text" id="location" name="location" required />
+      <div class="error-message" id="location-error"></div>
+
+      <label for="imageUrl">URL de la Imagen:</label>
+      <input type="url" id="imageUrl" name="imageUrl" required />
+      <div class="error-message" id="imageUrl-error"></div>
+
+      <h3 class="Condicion">
+        El precio debe ser mayor a 0 y si las propiedades se encuentran ubicadas
+        en Bogota o Cali su precio debe ser mayor a 2.000.000
+      </h3>
+
+      <label for="price">Precio:</label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        required
+        min="0"
+        step="0.01"
+      />
+      <div class="error-message" id="price-error"></div>
+
+      <div id="image-preview-container">
+        <label>Vista Previa de la Imagen:</label>
+        <img id="image-preview" src="#" alt="Vista Previa" />
+      </div>
+
+      <input type="hidden" id="createdAt" name="createdAt" />
+
+      <button type="submit">Guardar Propiedad</button>
+    </form>
+    <button onclick="window.location.href='listar.html'">
+      Listado de propiedades
+    </button>
+    <script src="crear.js"></script>
+  </body>
+</html>
